@@ -77,7 +77,6 @@ img {
 
   width: 100%;
   height: 100vh;
-  max-height: 1080px;
 
   .round {
     width: 75vmin;
@@ -92,7 +91,6 @@ img {
     top: 50%;
     transform: translate(-25%, -50%);
     animation: roundIn 0.65s ease-out;
-    will-change: left;
   }
 }
 
@@ -123,6 +121,14 @@ img {
   #navbar {
     padding: 0 24px;
   }
+
+  #top {
+    .round {
+      left: 25%;
+      top: 35%;
+      transform: translate(-25%, -35%);
+    }
+  }
 }
 
 @media (max-width:767px) {
@@ -133,5 +139,16 @@ img {
 
   #navbar {
     padding: 0 16px;
+  }
+
+  #top {
+    .round {
+      width: 75vmin;
+      height: 75vmin;
+
+      left: 33%;
+      top: 34%;
+      transform: translate(-33%, -34%);
+    }
   }
 }
