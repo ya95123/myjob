@@ -13,10 +13,37 @@ body {
   height: 100%;
 }
 
-body {
-  background: #0c0a0a;
+#app {
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+}
+
+.container {
+  width: 75%;
+  max-width: 1440px;
+  padding: 0 32px;
+  margin: auto;
 }
 
 #logo {
   width: 48px;
+}
+
+#menu {
+  width: 200px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 85%;
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 95%;
+    padding: 0 16px;
+  }
 }
