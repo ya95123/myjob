@@ -13,10 +13,21 @@ body {
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 #app {
   width: 100%;
   max-width: 1920px;
   margin: auto;
+  position: relative;
 }
 
 .container {
@@ -26,12 +37,96 @@ body {
   margin: auto;
 }
 
-#logo {
+#navbar {
+  width: 100%;
+  max-width: 1920px;
+  height: 72px;
+  padding: 0 32px;
+  margin: auto;
+  position: relative;
+  z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#navbar .logo {
   width: 48px;
+  height: 48px;
+  margin: 0 12px;
+}
+
+#navbar .icon-menu {
+  width: 46px;
+  height: 46px;
+  opacity: 0.75;
+  cursor: pointer;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  background: url(../img/lightning_outline.svg) no-repeat;
+}
+
+#navbar .icon-menu:hover {
+  opacity: 1;
+  background: url(../img/lightning.svg) no-repeat;
+}
+
+#top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  max-height: 1080px;
+}
+
+#top .round {
+  width: 75vmin;
+  max-width: 720px;
+  height: 75vmin;
+  max-height: 720px;
+  background: #F9F871;
+  border-radius: 50%;
+  position: absolute;
+  left: 25%;
+  top: 50%;
+  -webkit-transform: translate(-25%, -50%);
+          transform: translate(-25%, -50%);
+  -webkit-animation: roundIn 0.65s ease-out;
+          animation: roundIn 0.65s ease-out;
+  will-change: left;
 }
 
 #menu {
   width: 200px;
+}
+
+@-webkit-keyframes roundIn {
+  0% {
+    margin: 0 0 0 -5%;
+    opacity: 0.4;
+  }
+  100% {
+    margin: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes roundIn {
+  0% {
+    margin: 0 0 0 -5%;
+    opacity: 0.4;
+  }
+  100% {
+    margin: 0;
+    opacity: 1;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -39,11 +134,17 @@ body {
     width: 85%;
     padding: 0 24px;
   }
+  #navbar {
+    padding: 0 24px;
+  }
 }
 
 @media (max-width: 767px) {
   .container {
     width: 95%;
+    padding: 0 16px;
+  }
+  #navbar {
     padding: 0 16px;
   }
 }

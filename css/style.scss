@@ -13,10 +13,20 @@ body {
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+}
+
 #app {
   width: 100%;
   max-width: 1920px;
   margin: auto;
+  position: relative;
 }
 
 .container {
@@ -26,12 +36,82 @@ body {
   margin: auto;
 }
 
-#logo {
-  width: 48px;
+#navbar {
+  width: 100%;
+  max-width: 1920px;
+  height: 72px;
+  padding: 0 32px;
+  margin: auto;
+  position: relative;
+  z-index: 99;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    width: 48px;
+    height: 48px;
+    margin: 0 12px;
+  }
+
+  .icon-menu {
+    width: 46px;
+    height: 46px;
+    opacity: 0.75;
+    cursor: pointer;
+    transition: 0.25s;
+    background: url(../img/lightning_outline.svg) no-repeat;
+
+    &:hover {
+      opacity: 1;
+      background: url(../img/lightning.svg) no-repeat;
+    }
+  }
 }
+
+#top {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+  max-height: 1080px;
+
+  .round {
+    width: 75vmin;
+    max-width: 720px;
+    height: 75vmin;
+    max-height: 720px;
+    background: $yellow;
+    border-radius: 50%;
+
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    transform: translate(-25%, -50%);
+    animation: roundIn 0.65s ease-out;
+    will-change: left;
+  }
+}
+
 
 #menu {
   width: 200px;
+}
+
+@keyframes roundIn {
+  0% {
+    margin: 0 0 0 -5%;
+    opacity: 0.4;
+  }
+
+
+  100% {
+    margin: 0;
+    opacity: 1;
+  }
 }
 
 @media (max-width:1024px) {
@@ -39,11 +119,19 @@ body {
     width: 85%;
     padding: 0 24px;
   }
+
+  #navbar {
+    padding: 0 24px;
+  }
 }
 
 @media (max-width:767px) {
   .container {
     width: 95%;
+    padding: 0 16px;
+  }
+
+  #navbar {
     padding: 0 16px;
   }
 }
