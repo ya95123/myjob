@@ -96,8 +96,12 @@ img {
   .title-frame {
     position: absolute;
     left: 50%;
-    top: 55%;
-    transform: translate(-50%, -55%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    animation: fadeIn 0.5s;
   }
 
   .title {
@@ -107,6 +111,7 @@ img {
     letter-spacing: 1px;
     line-height: 1.35;
     display: inline-block;
+    white-space: nowrap;
 
     background-image: linear-gradient($pink, $pink);
     background-position: bottom left;
@@ -114,16 +119,22 @@ img {
     background-size: 100% 16px;
     background-repeat: no-repeat;
     animation: titleIn 2.5s;
-
-    &:nth-child(2) {
-      transform: translateX(61.5%);
-    }
   }
 }
 
 
 #menu {
   width: 200px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes roundIn {
@@ -166,6 +177,16 @@ img {
       top: 35%;
       transform: translate(-25%, -35%);
     }
+
+    .title-frame {
+      left: 57%;
+      top: 50%;
+      transform: translate(-57%, -50%);
+    }
+
+    .title {
+      font-size: $fsize-title-pad;
+    }
   }
 }
 
@@ -187,6 +208,30 @@ img {
       left: 33%;
       top: 34%;
       transform: translate(-33%, -34%);
+    }
+
+    .title-frame {
+      left: 52%;
+      top: 50%;
+      transform: translate(-52%, -50%);
+    }
+
+    .title {
+      font-size: $fsize-title-phone;
+      background-size: 0% 9px;
+      background-size: 100% 9px;
+    }
+  }
+
+  @keyframes titleIn {
+    0% {
+      background-image: linear-gradient($pink, $pink);
+      background-size: 0% 9px;
+    }
+
+    100% {
+      background-image: linear-gradient($pink, $pink);
+      background-size: 100% 9px;
     }
   }
 }
