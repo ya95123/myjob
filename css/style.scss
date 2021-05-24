@@ -126,6 +126,7 @@ img {
     font-size: 46px;
     position: absolute;
     left: 50%;
+    z-index: 10;
     opacity: 0;
     transform: translateX(-50%);
     animation: scrollIn 1.75s infinite 1.95s;
