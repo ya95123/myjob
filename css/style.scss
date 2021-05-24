@@ -122,16 +122,13 @@ img {
   }
 
   .scroll {
-    color: $grey;
+    color: $pink;
     font-size: 46px;
-    line-height: 0.1;
     position: absolute;
     left: 50%;
-    bottom: 10%;
-    transform: translate(-50%, -10%);
-
-    display: flex;
-    flex-direction: column;
+    opacity: 0;
+    transform: translateX(-50%);
+    animation: scrollIn 1.75s infinite 1.95s;
   }
 }
 
@@ -174,6 +171,18 @@ img {
   }
 }
 
+@keyframes scrollIn {
+  0% {
+    opacity: 0;
+    bottom: 12.5%;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 10%;
+  }
+}
+
 @media (max-width:1024px) {
   .container {
     width: 85%;
@@ -199,6 +208,22 @@ img {
 
     .title {
       font-size: $fsize-title-pad;
+    }
+
+    .scroll {
+      font-size: 6vw;
+    }
+  }
+
+  @keyframes scrollIn {
+    0% {
+      opacity: 0;
+      bottom: 15%;
+    }
+
+    100% {
+      opacity: 1;
+      bottom: 10%;
     }
   }
 }
@@ -234,6 +259,10 @@ img {
       background-size: 0% 9px;
       background-size: 100% 9px;
     }
+
+    .scroll {
+      font-size: 8vw;
+    }
   }
 
   @keyframes titleIn {
@@ -245,6 +274,18 @@ img {
     100% {
       background-image: linear-gradient($pink, $pink);
       background-size: 100% 9px;
+    }
+  }
+
+  @keyframes scrollIn {
+    0% {
+      opacity: 0;
+      bottom: 25%;
+    }
+
+    100% {
+      opacity: 1;
+      bottom: 20%;
     }
   }
 }
