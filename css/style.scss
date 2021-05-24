@@ -92,6 +92,33 @@ img {
     transform: translate(-25%, -50%);
     animation: roundIn 0.65s ease-out;
   }
+
+  .title-frame {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -55%);
+  }
+
+  .title {
+    padding: 0 0 10px;
+    color: $dark;
+    font-size: $fsize-title;
+    letter-spacing: 1px;
+    line-height: 1.35;
+    display: inline-block;
+
+    background-image: linear-gradient($pink, $pink);
+    background-position: bottom left;
+    background-size: 0% 16px;
+    background-size: 100% 16px;
+    background-repeat: no-repeat;
+    animation: titleIn 2.5s;
+
+    &:nth-child(2) {
+      transform: translateX(61.5%);
+    }
+  }
 }
 
 
@@ -105,10 +132,21 @@ img {
     opacity: 0.4;
   }
 
-
   100% {
     margin: 0;
     opacity: 1;
+  }
+}
+
+@keyframes titleIn {
+  0% {
+    background-image: linear-gradient($pink, $pink);
+    background-size: 0% 16px;
+  }
+
+  100% {
+    background-image: linear-gradient($pink, $pink);
+    background-size: 100% 16px;
   }
 }
 
