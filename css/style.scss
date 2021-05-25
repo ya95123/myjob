@@ -370,6 +370,17 @@ img {
     }
   }
 
+  #result {
+    #job-img {
+      width: 65%;
+      margin: 3% auto;
+    }
+
+    .chart {
+      width: 55%;
+    }
+  }
+
   @keyframes scrollIn {
     0% {
       opacity: 0;
@@ -417,6 +428,87 @@ img {
 
     .scroll {
       font-size: 8vw;
+    }
+  }
+
+  #result {
+    .result-text {
+      font-size: $fsize-result-phone;
+      line-height: 1;
+    }
+
+    #job-text {
+      font-size: $fsize-result-phone + 3vw;
+    }
+
+    #job-img {
+      width: 75%;
+      margin: 5% auto;
+    }
+
+    .chart {
+      width: 55%;
+
+      &::before {
+        left: -4px;
+        width: 4px;
+        border-radius: 5px;
+      }
+    }
+
+    .bar {
+      height: 25px;
+      margin: 25px 0;
+
+      &::after {
+        left: calc(100% + 8px);
+        width: 68px;
+        height: 48px;
+      }
+
+      &:nth-child(1) {
+        &::after {
+          background-size: 38px;
+        }
+      }
+
+      &:nth-child(2) {
+        &::after {
+          background-size: 38px;
+        }
+      }
+
+      &:nth-child(3) {
+        &::after {
+          background-size: 38px;
+        }
+      }
+
+      &:nth-child(4) {
+        &::after {
+          background-size: 38px;
+        }
+      }
+
+      &:nth-child(5) {
+        &::after {
+          background-size: 38px;
+        }
+      }
+    }
+
+    .name {
+      font-size: $fsize-chart-phone;
+      left: -($fsize-chart-phone*2 + 12px);
+    }
+
+    .evangelist {
+      left: -($fsize-chart-phone*3 + 12px);
+    }
+
+    .number {
+      font-size: $fsize-chart-phone - 5px;
+      left: calc(100% + 12px);
     }
   }
 

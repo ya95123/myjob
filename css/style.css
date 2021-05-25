@@ -431,6 +431,13 @@ img {
   #top .scroll {
     font-size: 6vw;
   }
+  #result #job-img {
+    width: 65%;
+    margin: 3% auto;
+  }
+  #result .chart {
+    width: 55%;
+  }
   @-webkit-keyframes scrollIn {
     0% {
       opacity: 0;
@@ -482,6 +489,60 @@ img {
   }
   #top .scroll {
     font-size: 8vw;
+  }
+  #result .result-text {
+    font-size: 8vw;
+    line-height: 1;
+  }
+  #result #job-text {
+    font-size: 11vw;
+  }
+  #result #job-img {
+    width: 75%;
+    margin: 5% auto;
+  }
+  #result .chart {
+    width: 55%;
+  }
+  #result .chart::before {
+    left: -4px;
+    width: 4px;
+    border-radius: 5px;
+  }
+  #result .bar {
+    height: 25px;
+    margin: 25px 0;
+  }
+  #result .bar::after {
+    left: calc(100% + 8px);
+    width: 68px;
+    height: 48px;
+  }
+  #result .bar:nth-child(1)::after {
+    background-size: 38px;
+  }
+  #result .bar:nth-child(2)::after {
+    background-size: 38px;
+  }
+  #result .bar:nth-child(3)::after {
+    background-size: 38px;
+  }
+  #result .bar:nth-child(4)::after {
+    background-size: 38px;
+  }
+  #result .bar:nth-child(5)::after {
+    background-size: 38px;
+  }
+  #result .name {
+    font-size: 20px;
+    left: -52px;
+  }
+  #result .evangelist {
+    left: -72px;
+  }
+  #result .number {
+    font-size: 15px;
+    left: calc(100% + 12px);
   }
   @-webkit-keyframes titleIn {
     0% {
