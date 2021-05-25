@@ -176,7 +176,6 @@ img {
 #result .type {
   width: 35%;
   height: auto;
-  background: #9993;
   position: relative;
 }
 
@@ -204,23 +203,9 @@ img {
   opacity: 0.85;
 }
 
-#result .bar::before {
-  content: '';
-  display: inline-block;
-  font-size: 32px;
-  font-weight: 400;
-  position: absolute;
-  left: -80px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
 #result .bar::after {
   content: '';
   display: inline-block;
-  font-size: 20px;
-  font-weight: 400;
   position: absolute;
   left: calc(100% + 12px);
   top: 50%;
@@ -228,12 +213,6 @@ img {
           transform: translateY(-50%);
   width: 70px;
   height: 48px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 #result .bar:nth-child(1) {
@@ -241,12 +220,7 @@ img {
   width: 100%;
 }
 
-#result .bar:nth-child(1)::before {
-  content: '使徒';
-}
-
 #result .bar:nth-child(1)::after {
-  content: '100';
   background: url(../img/jobs/apostle.svg) no-repeat;
   background-position: center right;
   background-size: 38px;
@@ -257,12 +231,7 @@ img {
   width: 90%;
 }
 
-#result .bar:nth-child(2)::before {
-  content: '先知';
-}
-
 #result .bar:nth-child(2)::after {
-  content: '90';
   background: url(../img/jobs/prophet.svg) no-repeat;
   background-position: center right;
   background-size: 38px;
@@ -273,13 +242,7 @@ img {
   width: 80%;
 }
 
-#result .bar:nth-child(3)::before {
-  content: '傳福音';
-  left: -112px;
-}
-
 #result .bar:nth-child(3)::after {
-  content: '80';
   background: url(../img/jobs/evangelist.svg) no-repeat;
   background-position: center right;
   background-size: 38px;
@@ -290,12 +253,7 @@ img {
   width: 70%;
 }
 
-#result .bar:nth-child(4)::before {
-  content: '牧師';
-}
-
 #result .bar:nth-child(4)::after {
-  content: '70';
   background: url(../img/jobs/priest.svg) no-repeat;
   background-position: center right;
   background-size: 38px;
@@ -306,15 +264,36 @@ img {
   width: 60%;
 }
 
-#result .bar:nth-child(5)::before {
-  content: '教師';
-}
-
 #result .bar:nth-child(5)::after {
-  content: '60';
   background: url(../img/jobs/teacher.svg) no-repeat;
   background-position: center right;
   background-size: 38px;
+}
+
+#result .name {
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  left: -80px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#result .evangelist {
+  left: -112px;
+}
+
+#result .number {
+  color: #FF6F91;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: calc(100% + 12px);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 5;
 }
 
 @-webkit-keyframes fadeIn {

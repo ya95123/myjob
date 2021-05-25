@@ -150,8 +150,8 @@ img {
   .type {
     width: 35%;
     height: auto;
-    background: #9993;
     position: relative;
+    // background: #9993;
 
     &::before {
       content: '';
@@ -177,22 +177,9 @@ img {
       opacity: 0.85;
     }
 
-    &::before {
-      content: '';
-      display: inline-block;
-      font-size: $fsize-chart;
-      font-weight: 400;
-      position: absolute;
-      left: -($fsize-chart*2 + 16px);
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
     &::after {
       content: '';
       display: inline-block;
-      font-size: $fsize-chart - 12px;
-      font-weight: 400;
       position: absolute;
       left: calc(100% + 12px);
       top: 50%;
@@ -200,20 +187,13 @@ img {
 
       width: 70px;
       height: 48px;
-      display: flex;
-      align-items: center;
     }
 
     &:nth-child(1) {
       background: $red;
       width: 100%;
 
-      &::before {
-        content: '使徒';
-      }
-
       &::after {
-        content: '100';
         background: url(../img/jobs/apostle.svg) no-repeat;
         background-position: center right;
         background-size: 38px;
@@ -224,12 +204,7 @@ img {
       background: $orange;
       width: 90%;
 
-      &::before {
-        content: '先知';
-      }
-
       &::after {
-        content: '90';
         background: url(../img/jobs/prophet.svg) no-repeat;
         background-position: center right;
         background-size: 38px;
@@ -240,13 +215,8 @@ img {
       background: $yellow;
       width: 80%;
 
-      &::before {
-        content: '傳福音';
-        left: -($fsize-chart*3 + 16px);
-      }
 
       &::after {
-        content: '80';
         background: url(../img/jobs/evangelist.svg) no-repeat;
         background-position: center right;
         background-size: 38px;
@@ -257,12 +227,8 @@ img {
       background: $green;
       width: 70%;
 
-      &::before {
-        content: '牧師';
-      }
 
       &::after {
-        content: '70';
         background: url(../img/jobs/priest.svg) no-repeat;
         background-position: center right;
         background-size: 38px;
@@ -273,17 +239,36 @@ img {
       background: $blue;
       width: 60%;
 
-      &::before {
-        content: '教師';
-      }
-
       &::after {
-        content: '60';
         background: url(../img/jobs/teacher.svg) no-repeat;
         background-position: center right;
         background-size: 38px;
       }
     }
+  }
+
+  .name {
+    font-size: $fsize-chart;
+    font-weight: 400;
+    position: absolute;
+    left: -($fsize-chart*2 + 16px);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .evangelist {
+    left: -($fsize-chart*3 + 16px);
+  }
+
+  .number {
+    color: $pink;
+    font-size: $fsize-chart - 12px;
+    font-weight: 400;
+    position: absolute;
+    left: calc(100% + 12px);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
   }
 }
 
