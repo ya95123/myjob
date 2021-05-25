@@ -143,12 +143,31 @@ img {
 
   .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
   }
 
-  .type {
-    width: 35%;
+  .result-text {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: $fsize-result;
+    line-height: 1;
+  }
+
+  #job-text {
+    color: $red;
+    font-size: $fsize-result + 24px;
+  }
+
+  #job-img {
+    width: 36%;
+    margin: 0 6% 0 0;
+  }
+
+  .chart {
+    width: 45%;
     height: auto;
     position: relative;
     // background: #9993;
@@ -158,10 +177,11 @@ img {
       display: block;
       position: absolute;
       left: -5px;
-      top: 0;
+      top: 50%;
+      transform: translateY(-50%);
 
       width: 5px;
-      height: 100%;
+      height: 96%;
       background: #3335;
       border-radius: 8px;
     }
@@ -185,7 +205,7 @@ img {
       top: 50%;
       transform: translateY(-50%);
 
-      width: 70px;
+      width: 75px;
       height: 48px;
     }
 
@@ -196,7 +216,7 @@ img {
       &::after {
         background: url(../img/jobs/apostle.svg) no-repeat;
         background-position: center right;
-        background-size: 38px;
+        background-size: 45px;
       }
     }
 
@@ -207,7 +227,7 @@ img {
       &::after {
         background: url(../img/jobs/prophet.svg) no-repeat;
         background-position: center right;
-        background-size: 38px;
+        background-size: 45px;
       }
     }
 
@@ -219,7 +239,7 @@ img {
       &::after {
         background: url(../img/jobs/evangelist.svg) no-repeat;
         background-position: center right;
-        background-size: 38px;
+        background-size: 45px;
       }
     }
 
@@ -231,7 +251,7 @@ img {
       &::after {
         background: url(../img/jobs/priest.svg) no-repeat;
         background-position: center right;
-        background-size: 38px;
+        background-size: 45px;
       }
     }
 
@@ -242,7 +262,7 @@ img {
       &::after {
         background: url(../img/jobs/teacher.svg) no-repeat;
         background-position: center right;
-        background-size: 38px;
+        background-size: 45px;
       }
     }
   }
@@ -263,7 +283,7 @@ img {
   .number {
     color: $pink;
     font-size: $fsize-chart - 12px;
-    font-weight: 400;
+    font-weight: 500;
     position: absolute;
     left: calc(100% + 12px);
     top: 50%;

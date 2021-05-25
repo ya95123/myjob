@@ -165,28 +165,49 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-#result .type {
-  width: 35%;
+#result .result-text {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: 48px;
+  line-height: 1;
+}
+
+#result #job-text {
+  color: #F55F3E;
+  font-size: 72px;
+}
+
+#result #job-img {
+  width: 36%;
+  margin: 0 6% 0 0;
+}
+
+#result .chart {
+  width: 45%;
   height: auto;
   position: relative;
 }
 
-#result .type::before {
+#result .chart::before {
   content: '';
   display: block;
   position: absolute;
   left: -5px;
-  top: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 5px;
-  height: 100%;
+  height: 96%;
   background: #3335;
   border-radius: 8px;
 }
@@ -211,7 +232,7 @@ img {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  width: 70px;
+  width: 75px;
   height: 48px;
 }
 
@@ -223,7 +244,7 @@ img {
 #result .bar:nth-child(1)::after {
   background: url(../img/jobs/apostle.svg) no-repeat;
   background-position: center right;
-  background-size: 38px;
+  background-size: 45px;
 }
 
 #result .bar:nth-child(2) {
@@ -234,7 +255,7 @@ img {
 #result .bar:nth-child(2)::after {
   background: url(../img/jobs/prophet.svg) no-repeat;
   background-position: center right;
-  background-size: 38px;
+  background-size: 45px;
 }
 
 #result .bar:nth-child(3) {
@@ -245,7 +266,7 @@ img {
 #result .bar:nth-child(3)::after {
   background: url(../img/jobs/evangelist.svg) no-repeat;
   background-position: center right;
-  background-size: 38px;
+  background-size: 45px;
 }
 
 #result .bar:nth-child(4) {
@@ -256,7 +277,7 @@ img {
 #result .bar:nth-child(4)::after {
   background: url(../img/jobs/priest.svg) no-repeat;
   background-position: center right;
-  background-size: 38px;
+  background-size: 45px;
 }
 
 #result .bar:nth-child(5) {
@@ -267,27 +288,27 @@ img {
 #result .bar:nth-child(5)::after {
   background: url(../img/jobs/teacher.svg) no-repeat;
   background-position: center right;
-  background-size: 38px;
+  background-size: 45px;
 }
 
 #result .name {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 400;
   position: absolute;
-  left: -80px;
+  left: -76px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
 #result .evangelist {
-  left: -112px;
+  left: -106px;
 }
 
 #result .number {
   color: #FF6F91;
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 500;
   position: absolute;
   left: calc(100% + 12px);
   top: 50%;
