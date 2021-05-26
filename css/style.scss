@@ -292,6 +292,23 @@ img {
   }
 }
 
+#description {
+  width: 100%;
+  letter-spacing: 1px;
+  text-align: justify;
+
+  h3 {
+    font-size: $fsize-description;
+  }
+
+  h4 {
+    margin: 0 0 2%;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -371,9 +388,11 @@ img {
   }
 
   #result {
+    height: auto;
+
     #job-img {
       width: 65%;
-      margin: 3% auto;
+      margin: 11% auto;
     }
 
     .chart {
@@ -443,7 +462,7 @@ img {
 
     #job-img {
       width: 75%;
-      margin: 5% auto;
+      margin: 9% auto;
     }
 
     .chart {
@@ -509,6 +528,22 @@ img {
     .number {
       font-size: $fsize-chart-phone - 5px;
       left: calc(100% + 12px);
+    }
+  }
+
+  #description {
+    width: 100%;
+    letter-spacing: 1px;
+    text-align: justify;
+
+    h3 {
+      font-size: $fsize-description-phone;
+    }
+
+    h4 {
+      margin: 0 0 5%;
+      font-size: 4.5vw;
+      font-weight: 400;
     }
   }
 
