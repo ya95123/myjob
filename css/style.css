@@ -3,7 +3,6 @@
 * {
   margin: 0;
   padding: 0;
-  list-style: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Noto Sans TC', 黑體-繁, Apple LiGothic Medium, PingFang, 微軟正黑體, Microsoft JhengHei, WenQuanYi Zen Hei, helvetica, Arial, sans-serif;
@@ -34,6 +33,10 @@ img {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.none {
+  display: none;
 }
 
 #app {
@@ -401,6 +404,70 @@ img {
   margin: 0 5px 0 0;
 }
 
+#question {
+  width: 100%;
+}
+
+#question .container {
+  background: #F9F87199;
+  border-radius: 25px;
+}
+
+#question .topic-description {
+  margin: 0 0 5% 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+#question .list {
+  width: 100%;
+  padding: 0 5%;
+}
+
+#question .topic {
+  font-size: 20px;
+}
+
+#question .range {
+  width: 70%;
+  height: 7px;
+  margin: 4.5% 0;
+  border-radius: 100px;
+  background: rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#question .score {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border: 2px solid #FF6F91;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(-15px);
+          transform: translateX(-15px);
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -661,6 +728,19 @@ img {
   #btn .btn-img {
     width: 28px;
     margin: 0 3px 0 0;
+  }
+  #question .topic-description {
+    margin: 0 0 5% 0;
+    font-size: 4.85vw;
+    text-align: justify;
+  }
+  #question .topic {
+    font-size: 4.5vw;
+  }
+  #question .range {
+    width: 100%;
+    height: 6px;
+    margin: 10% 0;
   }
   @-webkit-keyframes titleIn {
     0% {

@@ -3,7 +3,6 @@
 * {
   margin: 0;
   padding: 0;
-  list-style: none;
   box-sizing: border-box;
   font-family: 'Noto Sans TC', 黑體-繁, Apple LiGothic Medium, PingFang, 微軟正黑體, Microsoft JhengHei, WenQuanYi Zen Hei, helvetica, Arial, sans-serif;
 }
@@ -32,6 +31,10 @@ h4 {
 img {
   display: block;
   object-fit: cover;
+}
+
+.none {
+  display: none;
 }
 
 #app {
@@ -309,7 +312,6 @@ img {
   text-align: justify;
 }
 
-
 #btn {
   width: 100%;
   // background: #333;
@@ -368,6 +370,58 @@ img {
   .btn-img {
     width: 32px;
     margin: 0 5px 0 0;
+  }
+}
+
+#question {
+  width: 100%;
+
+  .container {
+    background: #F9F87199;
+    border-radius: 25px;
+  }
+
+  .topic-description {
+    margin: 0 0 5% 0;
+    text-align: center;
+    font-size: $fsize-topic;
+    font-weight: 500;
+  }
+
+  .list {
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  .topic {
+    font-size: $fsize-description-s;
+  }
+
+  .range {
+    width: 70%;
+    height: 7px;
+    margin: 4.5% 0;
+    border-radius: 100px;
+    background: rgba(#000, 0.2);
+    position: relative;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .score {
+    width: 30px;
+    height: 30px;
+    background: $white;
+    border: 2px solid $pink;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-15px);
+    cursor: grab;
   }
 }
 
@@ -624,6 +678,24 @@ img {
     .btn-img {
       width: 28px;
       margin: 0 3px 0 0;
+    }
+  }
+
+  #question {
+    .topic-description {
+      margin: 0 0 5% 0;
+      font-size: $fsize-topic-phone;
+      text-align: justify;
+    }
+
+    .topic {
+      font-size: $fsize-description-s-phone;
+    }
+
+    .range {
+      width: 100%;
+      height: 6px;
+      margin: 10% 0;
     }
   }
 
