@@ -468,6 +468,45 @@ img {
   cursor: grab;
 }
 
+#footer {
+  padding: 2% 0 0;
+  color: #111;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+#footer a {
+  color: #111;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+#footer a:hover {
+  color: #F55F3E;
+}
+
+#footer p {
+  line-height: 1.65;
+}
+
+#footer .share {
+  margin: 0 0 12px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#footer .fb-share-button {
+  margin: 0 1.5% 0 0;
+}
+
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -741,6 +780,16 @@ img {
     width: 100%;
     height: 6px;
     margin: 10% 0;
+  }
+  #footer {
+    padding: 5% 0 0;
+    font-size: 12px;
+  }
+  #footer .share {
+    margin: 0 0 10px 0;
+  }
+  #footer .fb-share-button {
+    margin: 0 3% 0 0;
   }
   @-webkit-keyframes titleIn {
     0% {

@@ -10,6 +10,11 @@
 </head>
 
 <body>
+  <!-- fb 外掛 -->
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v10.0"
+    nonce="UVsjk9S7"></script>
+
   <div id="app">
     <!-- *navbar -->
     <section id="navbar">
@@ -125,6 +130,35 @@
       </div>
     </section>
 
+    <!-- *footer -->
+    <section id="footer">
+      <div class="container">
+        <!-- 分享 -->
+        <div class="share">
+          <!-- fb -->
+          <div class="fb-share-button" data-href="https://ya95123.github.io/myjob/" data-layout="button_count"
+            data-size="small">
+            <a target="_blank"
+              href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fya95123.github.io%2Fmyjob%2F&amp;src=sdkpreparse"
+              class="fb-xfbml-parse-ignore">分享</a>
+          </div>
+          <!-- line -->
+          <div class="line-it-button" data-lang="zh_Hant" data-type="share-a" data-ver="3"
+            data-url="https://ya95123.github.io/myjob/" data-color="default" data-size="small" data-count="true"
+            style="display: none;"></div>
+        </div>
+
+
+        <p>Icons made by
+          <a href="https://www.freepik.com" title="Freepik">Freepik</a> ,
+          <a href="https://www.flaticon.com/authors/monkik" title="monkik">monkik</a>
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        </p>
+        <p>Alfred Design &copy; 2021</p>
+      </div>
+    </section>
+
     <!-- TODO 先做 footer 再來處理 range -->
 
 
@@ -132,6 +166,9 @@
 
   <!-- font-awesome -->
   <script src="https://kit.fontawesome.com/7c562329af.js" crossorigin="anonymous"></script>
+  <!-- line 分享 -->
+  <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async"
+    defer="defer"></script>
   <script src="js/index.js"></script>
 </body>
 
