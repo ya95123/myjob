@@ -1,34 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
 
-$white:#fff;
-$light:#fff9;
-$dark:#111;
-$grey:#111c;
+// bg
+$bg-index: linear-gradient(-125deg, #FFE267 1.12%, #F3B895 45%, #AAB5C6 65%, #A4B0B4 85%, #3D7190 100%);
+$bg-explore: linear-gradient(135deg, #3D7190 0%, #1B1F33 50%, #3D7190 100%);
+$bg-result: linear-gradient(50deg, #FFF0BD 0%,
+  #ACCDED 85%);
 
-$pink:#FF6F91;
-$red:#F55F3E;
-$orange:#FA9132;
-$yellow:#F9F871;
-$green:#8CFA64;
-$blue:#45BCDE;
+$bg-bar: linear-gradient(180deg, #FFE267 1.12%, #F3B895 45%, #AAB5C6 65%, #A4B0B4 85%, #3D7190 100%);
+$bg-btn: #fff;
+$bg-notice: rgba(255, 255, 255, 0.88);
+$bg-job: #FDCF00;
+$bg-focusCircle: rgba(255, 255, 255, 0.5);
 
-// font-size
-$fsize-title:118px;
-$fsize-title-pad:10vw;
-$fsize-title-phone:11vw;
-$fsize-result:48px;
-$fsize-result-phone:8vw;
-$fsize-chart:30px;
-$fsize-chart-phone:20px;
-$fsize-description:26px;
-$fsize-description-phone:5vw;
-$fsize-description-s:20px;
-$fsize-description-s-phone:4.5vw;
-$fsize-btn:22px;
-$fsize-btn-phone:4vw;
-$fsize-topic:24px;
-$fsize-topic-phone:4.85vw;
-$fsize-explain:12px;
-$fsize-menu:24px;
-$fsize-footer:14px;
-$fsize-footer-phone:12px;
+// sun
+$sun-red: linear-gradient(45deg, #EE7E55 0%, #E50012 50%, #CF131B 100%);
+$sun-yellow: linear-gradient(-130deg, #FFEEA7 0%, #FDD000 50%, #F8B300 100%);
+$sunSpotLine: linear-gradient(0deg, #FFEEA7 0%, #FDD000 50%, #F8B300 100%); // opacity 0.55 index 跟 result 差 1.49 倍
+$sunRound-red: #EE7E55;
+$sunRound-yellow: #F7B200;
+
+// opacity
+$opacity-main: 0.88;
+$opacity-secondary: 0.55;
+
+// shadow
+$shadow-runner: -8px 8px 8px rgba(51, 51, 51, 0.55);
+$shadow-exlporeShine: 0 0 3px rgba(247, 178, 0, 0.95);
+$shadow-starShine: 0 0 7px rgba(255, 255, 255, 0.88);
+$shadow-result: 3px -1px 0 rgba(26, 30, 50, 0.1);
+$shadow-resultTop: 2px -1px 0 rgba(247, 178, 0, 0.88);
+$shadow-footer: 1px 0 0 rgba(26, 30, 50, 0.1);
+
+// font color
+$fontColor-main: #fff;
+$fontColor-secondary: #F7B200;
+$fontColor-notice: #1A1E32;
+
+// font size
+$fs-indexTitle: 128px; //bold
+$fs-normal: 20px;
+
+$fs-description: 28px; //bold lineHeight 1.6
+$fs-explore: 24px; // lineHeight 1.5
+
+$fs-job0: 45px;
+$fs-job1: 55px;
+$fs-jobAll: 35px;
+$fs-number: 28px;
+$fs-tips: 12px;
+$fs-footer: 12px; //lineHeight 2
+
+// font spaceing
+$space-normal: 1px;
+$space-footer: 3px; //lineHeight 2
