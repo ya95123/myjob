@@ -36,6 +36,7 @@ img {
   width: 100%;
   height: 100vh;
   overflow-y: scroll;
+  overflow-x: hidden;
 
   &::-webkit-scrollbar {
     width: 7px;
@@ -56,10 +57,62 @@ img {
   }
 }
 
+#navbar {
+  width: 100%;
+  padding: 24px 48px;
+  display: flex;
+  justify-content: space-between;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .btn-menu {
+    width: 38px;
+    opacity: $opacity-main;
+    cursor: pointer;
+    transition: 0.25s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+
 #index {
   width: 100%;
   height: 300vh;
   background: $bg-index;
+  position: relative;
+
+  .sun {
+    position: absolute;
+    right: -350px;
+    top: -360px;
+  }
+
+  .sunRed {
+    width: 660px;
+    height: 600px;
+    background: $sun-red;
+    border-radius: 50%;
+  }
+
+  .sunRed-line {
+    width: 660px;
+    height: 600px;
+    border: 2px solid $sunRound-red;
+    border-radius: 50%;
+    transform: translate(-18px, 12px);
+    opacity: $opacity-secondary;
+  }
 }
 
 

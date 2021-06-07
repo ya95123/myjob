@@ -38,6 +38,7 @@ img {
   width: 100%;
   height: 100vh;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 #app::-webkit-scrollbar {
@@ -54,10 +55,66 @@ img {
   background: #EE7E55;
 }
 
+#navbar {
+  width: 100%;
+  padding: 24px 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+}
+
+#navbar .logo {
+  width: 60px;
+  height: 60px;
+}
+
+#navbar .btn-menu {
+  width: 38px;
+  opacity: 0.88;
+  cursor: pointer;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+#navbar .btn-menu:hover {
+  opacity: 1;
+}
+
 #index {
   width: 100%;
   height: 300vh;
   background: linear-gradient(-125deg, #FFE267 1.12%, #F3B895 45%, #AAB5C6 65%, #A4B0B4 85%, #3D7190 100%);
+  position: relative;
+}
+
+#index .sun {
+  position: absolute;
+  right: -350px;
+  top: -360px;
+}
+
+#index .sunRed {
+  width: 660px;
+  height: 600px;
+  background: linear-gradient(45deg, #EE7E55 0%, #E50012 50%, #CF131B 100%);
+  border-radius: 50%;
+}
+
+#index .sunRed-line {
+  width: 660px;
+  height: 600px;
+  border: 2px solid #EE7E55;
+  border-radius: 50%;
+  -webkit-transform: translate(-18px, 12px);
+          transform: translate(-18px, 12px);
+  opacity: 0.55;
 }
 
 @-webkit-keyframes fadeIn {
