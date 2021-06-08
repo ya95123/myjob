@@ -205,7 +205,7 @@ img {
 #explore {
   width: 100%;
   height: 500vh;
-  background: linear-gradient(135deg, #3D7190 0%, #1B1F33 13%, #1B1F33 87%, #3D7190 100%);
+  background: #1B1F33;
   position: relative;
 }
 
@@ -214,6 +214,7 @@ img {
   left: 0;
   top: 0;
   width: 100%;
+  pointer-events: none;
 }
 
 #explore .bg-star:nth-child(2) {
