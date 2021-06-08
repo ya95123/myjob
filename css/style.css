@@ -180,6 +180,16 @@ img {
   font-size: 128px;
   font-weight: 700;
   text-align: center;
+  position: relative;
+}
+
+#index .text .fa-chevron-down {
+  margin-left: 16px;
+  font-size: 64px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(16px, -50%);
+          transform: translate(16px, -50%);
 }
 
 #index .text .words {

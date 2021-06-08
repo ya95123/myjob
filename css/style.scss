@@ -169,6 +169,15 @@ img {
       font-size: $fs-indexTitle;
       font-weight: 700;
       text-align: center;
+      position: relative;
+    }
+
+    .fa-chevron-down {
+      margin-left: 16px;
+      font-size: 64px;
+      position: absolute;
+      top: 50%;
+      transform: translate(16px, -50%);
     }
 
     .words {
@@ -194,6 +203,7 @@ img {
   }
 }
 
+// 跟 container 和文字大小、menu 有關
 @media (max-width:1300px) {}
 
 @media (max-width:1024px) {}
