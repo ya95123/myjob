@@ -12,6 +12,26 @@ body {
   height: 100%;
 }
 
+body {
+  &::-webkit-scrollbar {
+    width: 7px;
+    background: transparent !important;
+  }
+
+  &::-webkit-scrollbar-track {
+    margin: 0 0 1px 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: $sunRound-red;
+
+    // &:hover {
+    //   background: rgb(255, 255, 255);
+    // }
+  }
+}
+
 a {
   text-decoration: none;
 }
@@ -41,32 +61,13 @@ img {
 
 #app {
   width: 100%;
-  height: 100vh;
+  height: auto;
   // overflow-y: scroll;
   overflow-x: hidden;
   position: relative;
   color: $fontColor-main;
   letter-spacing: 1px;
   scroll-behavior: smooth;
-
-
-  &::-webkit-scrollbar {
-    width: 7px;
-    background: transparent !important;
-  }
-
-  &::-webkit-scrollbar-track {
-    margin: 0 0 1px 0;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background: $sunRound-red;
-
-    // &:hover {
-    //   background: rgb(255, 255, 255);
-    // }
-  }
 }
 
 #navbar {
