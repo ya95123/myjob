@@ -68,7 +68,7 @@ img {
   overflow-x: hidden;
   position: relative;
   color: $fontColor-main;
-  letter-spacing: 1px;
+  letter-spacing: $space-normal;
 }
 
 #navbar {
@@ -199,7 +199,7 @@ img {
 #explore {
   width: 100%;
   height: 500vh;
-  padding: 120px 0;
+  padding: 0 0 120px 0;
   background: $bg-explore;
   position: relative;
 
@@ -219,6 +219,7 @@ img {
   }
 
   .description {
+    padding: 120px 0;
     font-size: $fs-description;
     font-weight: bold;
     text-align: center;
@@ -228,6 +229,56 @@ img {
     &:hover {
       filter: drop-shadow($shadow-exlporeShine);
     }
+  }
+
+  .description-small {
+    padding: 120px 0 0;
+    font-size: $fs-explore;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5;
+    transition: $trans-text;
+  }
+
+  .star {
+    width: 90px;
+    margin: auto;
+  }
+
+  .eg-range {
+    width: 190px;
+    height: 4px;
+    margin: 70px auto;
+  }
+
+  .eg-bar {
+    // 10% 為起始點
+    width: 10%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 18px;
+    background: $bg-bar;
+    position: relative;
+    transition: $trans-normal;
+  }
+
+  .eg-starFill {
+    width: 30px;
+    position: absolute;
+    right: -15px;
+    top: -14.8px;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  .eg-number {
+    font-size: $fs-explore;
+    position: absolute;
+    right: -40px;
+    top: -16px;
   }
 }
 

@@ -206,7 +206,7 @@ img {
 #explore {
   width: 100%;
   height: 500vh;
-  padding: 120px 0;
+  padding: 0 0 120px 0;
   background: #1B1F33;
   position: relative;
 }
@@ -227,6 +227,7 @@ img {
 }
 
 #explore .description {
+  padding: 120px 0;
   font-size: 28px;
   font-weight: bold;
   text-align: center;
@@ -238,6 +239,60 @@ img {
 #explore .description:hover {
   -webkit-filter: drop-shadow(0 0 3px rgba(247, 178, 0, 0.95));
           filter: drop-shadow(0 0 3px rgba(247, 178, 0, 0.95));
+}
+
+#explore .description-small {
+  padding: 120px 0 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+#explore .star {
+  width: 90px;
+  margin: auto;
+}
+
+#explore .eg-range {
+  width: 190px;
+  height: 4px;
+  margin: 70px auto;
+}
+
+#explore .eg-bar {
+  width: 10%;
+  height: 100%;
+  display: inline-block;
+  border-radius: 18px;
+  background: -webkit-gradient(linear, right top, left top, color-stop(1.12%, #FFE267), color-stop(45%, #F3B895), color-stop(65%, #AAB5C6), color-stop(85%, #A4B0B4), to(#3D7190));
+  background: linear-gradient(270deg, #FFE267 1.12%, #F3B895 45%, #AAB5C6 65%, #A4B0B4 85%, #3D7190 100%);
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#explore .eg-starFill {
+  width: 30px;
+  position: absolute;
+  right: -15px;
+  top: -14.8px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+#explore .eg-starFill:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+#explore .eg-number {
+  font-size: 24px;
+  position: absolute;
+  right: -40px;
+  top: -16px;
 }
 
 @-webkit-keyframes fadeIn {
