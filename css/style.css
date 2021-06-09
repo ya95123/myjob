@@ -258,13 +258,13 @@ img {
 
 #explore .eg-range {
   width: 190px;
-  height: 4px;
+  height: auto;
   margin: 70px auto;
 }
 
 #explore .eg-bar {
   width: 10%;
-  height: 100%;
+  height: 4px;
   display: inline-block;
   border-radius: 18px;
   background: -webkit-gradient(linear, right top, left top, color-stop(1.12%, #FFE267), color-stop(45%, #F3B895), color-stop(65%, #AAB5C6), color-stop(85%, #A4B0B4), to(#3D7190));
@@ -293,6 +293,34 @@ img {
   position: absolute;
   right: -40px;
   top: -16px;
+}
+
+#explore .query {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+#explore .btn-query {
+  padding: 10px;
+  margin: 48px 6px;
+  border: none;
+  border-radius: 18px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #F7B200;
+  background-color: #fff;
+  opacity: 0.88;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+#explore .btn-query:hover {
+  opacity: 1;
+  -webkit-filter: drop-shadow(0 0 3px rgba(247, 178, 0, 0.95));
+          filter: drop-shadow(0 0 3px rgba(247, 178, 0, 0.95));
 }
 
 @-webkit-keyframes fadeIn {
