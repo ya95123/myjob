@@ -179,7 +179,7 @@ img {
 
 #index .text .title {
   font-size: 128px;
-  font-weight: 700;
+  font-weight: bold;
   text-align: center;
   position: relative;
 }
@@ -206,6 +206,7 @@ img {
 #explore {
   width: 100%;
   height: 500vh;
+  padding: 120px 0;
   background: #1B1F33;
   position: relative;
 }
@@ -223,6 +224,20 @@ img {
   bottom: 0;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+#explore .description {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.6;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+#explore .description:hover {
+  -webkit-filter: drop-shadow(0 0 3px rgba(247, 178, 0, 0.95));
+          filter: drop-shadow(0 0 3px rgba(247, 178, 0, 0.95));
 }
 
 @-webkit-keyframes fadeIn {

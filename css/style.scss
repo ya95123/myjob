@@ -93,7 +93,7 @@ img {
     width: 38px;
     opacity: $opacity-main;
     cursor: pointer;
-    transition: 0.25s;
+    transition: $trans-text;
 
     &:hover {
       opacity: 1;
@@ -139,7 +139,7 @@ img {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    transition: 0.3s;
+    transition: $trans-normal;
   }
 
   .runner {
@@ -171,7 +171,7 @@ img {
 
     .title {
       font-size: $fs-indexTitle;
-      font-weight: 700;
+      font-weight: bold;
       text-align: center;
       position: relative;
     }
@@ -199,6 +199,7 @@ img {
 #explore {
   width: 100%;
   height: 500vh;
+  padding: 120px 0;
   background: $bg-explore;
   position: relative;
 
@@ -214,6 +215,18 @@ img {
       top: unset;
       bottom: 0;
       transform: rotate(180deg)
+    }
+  }
+
+  .description {
+    font-size: $fs-description;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.6;
+    transition: $trans-text;
+
+    &:hover {
+      filter: drop-shadow($shadow-exlporeShine);
     }
   }
 }
