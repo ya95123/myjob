@@ -300,6 +300,11 @@ img {
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #explore .btn-query {
@@ -315,12 +320,23 @@ img {
   -webkit-transition: 0.25s;
   transition: 0.25s;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #explore .btn-query:hover {
   opacity: 1;
   -webkit-filter: drop-shadow(0 0 3px rgba(247, 178, 0, 0.95));
           filter: drop-shadow(0 0 3px rgba(247, 178, 0, 0.95));
+}
+
+#explore .btn-icon {
+  width: 28px;
+  margin-right: 4px;
 }
 
 @-webkit-keyframes fadeIn {

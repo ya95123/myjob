@@ -284,6 +284,8 @@ img {
   .query {
     width: fit-content;
     margin: auto;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .btn-query {
@@ -299,10 +301,18 @@ img {
     transition: $trans-text;
     cursor: pointer;
 
+    display: flex;
+    align-items: center;
+
     &:hover {
       opacity: 1;
       filter: drop-shadow($shadow-exlporeShine);
     }
+  }
+
+  .btn-icon {
+    width: 28px;
+    margin-right: 4px;
   }
 }
 
