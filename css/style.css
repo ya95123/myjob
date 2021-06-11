@@ -205,7 +205,6 @@ img {
 
 #explore {
   width: 100%;
-  height: 500vh;
   padding: 0 0 120px 0;
   background: #1B1F33;
   position: relative;
@@ -291,7 +290,7 @@ img {
 #explore .eg-number {
   font-size: 24px;
   position: absolute;
-  right: -40px;
+  right: -48px;
   top: -16px;
 }
 
@@ -309,7 +308,7 @@ img {
 
 #explore .btn-query {
   padding: 10px;
-  margin: 42px 10px;
+  margin: 40px 10px 66px;
   border: none;
   border-radius: 18px;
   font-size: 24px;
@@ -337,6 +336,54 @@ img {
 #explore .btn-icon {
   width: 28px;
   margin-right: 4px;
+}
+
+#explore .main {
+  padding: 0 15vmin;
+}
+
+#explore .topic {
+  font-size: 24px;
+  line-height: 1.6;
+}
+
+#explore .range {
+  width: 90%;
+  height: auto;
+  margin: 45px 30px;
+}
+
+#explore .bar {
+  width: 2%;
+  height: 4px;
+  display: inline-block;
+  border-radius: 18px;
+  background: -webkit-gradient(linear, right top, left top, color-stop(1.12%, #FFE267), color-stop(45%, #F3B895), color-stop(65%, #AAB5C6), color-stop(85%, #A4B0B4), to(#3D7190));
+  background: linear-gradient(270deg, #FFE267 1.12%, #F3B895 45%, #AAB5C6 65%, #A4B0B4 85%, #3D7190 100%);
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#explore .starFill {
+  width: 30px;
+  position: absolute;
+  right: -15px;
+  top: -14.8px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+#explore .starFill:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+#explore .number {
+  font-size: 24px;
+  position: absolute;
+  right: -48px;
+  top: -16px;
 }
 
 @-webkit-keyframes fadeIn {

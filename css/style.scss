@@ -14,7 +14,6 @@ body {
 }
 
 body {
-
   &::-webkit-scrollbar {
     width: 7px;
     background: transparent !important;
@@ -198,7 +197,6 @@ img {
 
 #explore {
   width: 100%;
-  height: 500vh;
   padding: 0 0 120px 0;
   background: $bg-explore;
   position: relative;
@@ -277,7 +275,7 @@ img {
   .eg-number {
     font-size: $fs-explore;
     position: absolute;
-    right: -40px;
+    right: -48px;
     top: -16px;
   }
 
@@ -290,7 +288,7 @@ img {
 
   .btn-query {
     padding: 10px;
-    margin: 42px 10px;
+    margin: 40px 10px 66px;
     border: none;
     border-radius: 18px;
     font-size: $fs-explore;
@@ -313,6 +311,52 @@ img {
   .btn-icon {
     width: 28px;
     margin-right: 4px;
+  }
+
+  // main-topic
+  .main {
+    padding: 0 15vmin;
+  }
+
+  .topic {
+    font-size: $fs-explore;
+    line-height: 1.6;
+  }
+
+  .range {
+    width: 90%;
+    height: auto;
+    margin: 45px 30px;
+  }
+
+  .bar {
+    // 2% 為起始點，滿為 100%
+    width: 2%;
+    height: 4px;
+    display: inline-block;
+    border-radius: 18px;
+    background: $bg-bar;
+    position: relative;
+    transition: $trans-normal;
+  }
+
+  .starFill {
+    width: 30px;
+    position: absolute;
+    right: -15px;
+    top: -14.8px;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  .number {
+    font-size: $fs-explore;
+    position: absolute;
+    right: -48px;
+    top: -16px;
   }
 }
 
