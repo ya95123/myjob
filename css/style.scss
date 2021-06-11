@@ -358,6 +358,40 @@ img {
     right: -48px;
     top: -16px;
   }
+
+  #submit {
+    width: fit-content;
+    margin: 130px auto 200px;
+    font-size: $fs-explore;
+    cursor: pointer;
+    position: relative;
+    transition: 0.1s;
+
+    &:active {
+      color: $fontColor-secondary;
+    }
+  }
+
+  .loading-bar {
+    display: block;
+    width: 0;
+    height: 2px;
+    background: $fontColor-main;
+    border-radius: 18px;
+    transition: $trans-normal;
+
+    position: absolute;
+    left: 0;
+    top: -16px;
+  }
+
+  .loading-star {
+    width: 90px;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 18px);
+    // TODO 動畫閃爍
+  }
 }
 
 

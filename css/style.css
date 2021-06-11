@@ -386,6 +386,42 @@ img {
   top: -16px;
 }
 
+#explore #submit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 130px auto 200px;
+  font-size: 24px;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+#explore #submit:active {
+  color: #F7B200;
+}
+
+#explore .loading-bar {
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  border-radius: 18px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: absolute;
+  left: 0;
+  top: -16px;
+}
+
+#explore .loading-star {
+  width: 90px;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 18px);
+}
+
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
