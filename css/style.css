@@ -29,6 +29,7 @@ body::-webkit-scrollbar-thumb {
 
 a {
   text-decoration: none;
+  color: #fff;
 }
 
 img {
@@ -420,6 +421,18 @@ img {
   position: absolute;
   left: 0;
   top: calc(100% + 18px);
+}
+
+#footer {
+  width: 100%;
+  padding: 60px 12px;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 2px;
+  line-height: 2;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 @-webkit-keyframes fadeIn {

@@ -35,6 +35,7 @@ body {
 
 a {
   text-decoration: none;
+  color: $fontColor-main;
 }
 
 img {
@@ -392,6 +393,19 @@ img {
     top: calc(100% + 18px);
     // TODO 動畫閃爍
   }
+}
+
+#footer {
+  width: 100%;
+  padding: 60px 12px;
+  text-align: center;
+  font-size: $fs-footer;
+  letter-spacing: 2px;
+  line-height: 2;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 
