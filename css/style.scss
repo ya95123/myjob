@@ -395,13 +395,22 @@ img {
   }
 }
 
+#result {
+  width: 100%;
+  height: 100vh;
+  background: $bg-result;
+}
+
 #footer {
   width: 100%;
-  padding: 60px 12px;
+  padding: 3% 12px;
   text-align: center;
   font-size: $fs-footer;
   letter-spacing: 2px;
   line-height: 2;
+  color: $fontColor-main;
+  filter: drop-shadow($shadow-footer);
+  opacity: 0.95;
 
   position: absolute;
   left: 0;
