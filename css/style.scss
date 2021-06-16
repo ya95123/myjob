@@ -399,8 +399,20 @@ img {
   width: 100%;
   height: 100vh;
   background: $bg-result;
-  position: relative;
   overflow: hidden;
+  position: relative;
+
+  .container {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .sun {
     position: absolute;
@@ -425,6 +437,7 @@ img {
       opacity: $opacity-secondary;
     }
   }
+
 }
 
 #footer {

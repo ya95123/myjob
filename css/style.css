@@ -427,8 +427,26 @@ img {
   width: 100%;
   height: 100vh;
   background: linear-gradient(50deg, #FFF0BD 0%, #ACCDED 85%);
-  position: relative;
   overflow: hidden;
+  position: relative;
+}
+
+#result .container {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #result .sun {
