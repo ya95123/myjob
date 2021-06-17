@@ -489,7 +489,7 @@ img {
 }
 
 #result .result-highest .result-img {
-  width: 100%;
+  width: 80%;
   pointer-events: none;
 }
 
@@ -499,20 +499,20 @@ img {
   width: fit-content;
   padding: 5px 20px;
   margin: 20px 0 6px 0;
-  font-size: 40px;
+  font-size: 36px;
   font-weight: bold;
   background: #FDCF00;
   border-radius: 18px;
 }
 
 #result .result-highest .result-job {
-  font-size: 50px;
+  font-size: 42px;
 }
 
 #result .result-highest .result-check {
   color: #F7B200;
   padding: 0 0 1px;
-  margin: 0 7px 0 auto;
+  margin: 0 6% 0 auto;
   border-bottom: 1px solid transparent;
   -webkit-transition: 0.25s;
   transition: 0.25s;
@@ -520,6 +520,43 @@ img {
 
 #result .result-highest .result-check:hover {
   border-bottom: 1px solid #F7B200;
+}
+
+#result .chart {
+  width: 45%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#result .chart .chart-frame {
+  width: 75%;
+  position: relative;
+}
+
+#result .chart .chart-frame::after {
+  content: '';
+  width: 5px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 13px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#result .chart .chart-bar {
+  width: 100%;
+  height: 35px;
+  margin: 32px 0;
+  background: linear-gradient(50deg, #FFEEA7 0%, #FDD000 100%);
+  border-radius: 13px;
+  position: relative;
 }
 
 #footer {

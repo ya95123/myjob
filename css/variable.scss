@@ -2,13 +2,13 @@
 $bg-index: linear-gradient(-125deg, #FFE267 1.12%, #F3B895 45%, #AAB5C6 65%, #A4B0B4 85%, #3D7190 100%);
 // $bg-explore: linear-gradient(135deg, #3D7190 0%, #1B1F33 13%, #1B1F33 87%, #3D7190 100%);
 $bg-explore:#1B1F33;
-$bg-result: linear-gradient(50deg, #FFF0BD 0%,
-  #ACCDED 85%);
+$bg-result: linear-gradient(50deg, #FFF0BD 0%, #ACCDED 85%);
 
 $bg-bar: linear-gradient(270deg, #FFE267 1.12%, #F3B895 45%, #AAB5C6 65%, #A4B0B4 85%, #3D7190 100%);
 $bg-btn: #fff;
 $bg-notice: rgba(255, 255, 255, 0.88);
 $bg-job: #FDCF00;
+$bg-result-bar: linear-gradient(50deg, #FFEEA7 0%, #FDD000 100%);
 $bg-focusCircle: rgba(255, 255, 255, 0.5);
 
 // sun
@@ -42,8 +42,8 @@ $fs-normal: 20px;
 $fs-description: 28px; //bold lineHeight 1.6
 $fs-explore: 24px; // lineHeight 1.5
 
-$fs-job0: 40px;
-$fs-job1: 50px;
+$fs-job0: 36px;
+$fs-job1: 42px;
 $fs-jobAll: 35px;
 $fs-score: 28px;
 $fs-tips: 12px;
