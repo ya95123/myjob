@@ -462,6 +462,18 @@ img {
     .result-job {
       font-size: $fs-job1;
     }
+
+    .result-check {
+      color: $fontColor-secondary;
+      padding: 0 0 1px;
+      margin: 0 7px 0 auto;
+      border-bottom: 1px solid transparent;
+      transition: $trans-text;
+
+      &:hover {
+        border-bottom: 1px solid $fontColor-secondary;
+      }
+    }
   }
 
 }

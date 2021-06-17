@@ -509,6 +509,19 @@ img {
   font-size: 50px;
 }
 
+#result .result-highest .result-check {
+  color: #F7B200;
+  padding: 0 0 1px;
+  margin: 0 7px 0 auto;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+#result .result-highest .result-check:hover {
+  border-bottom: 1px solid #F7B200;
+}
+
 #footer {
   width: 100%;
   margin: 3% 12px;
