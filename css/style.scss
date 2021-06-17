@@ -140,9 +140,16 @@ img {
     height: 100%;
     pointer-events: none;
     transition: $trans-normal;
+    // animation: spotLineIn 1s 2.5s;
+    // animation-fill-mode: forwards;
+
+    @media (min-width:1921px) {
+      width: auto;
+    }
   }
 
   .runner {
+    width: 25%;
     position: absolute;
     left: 0;
     bottom: 1%;
@@ -150,8 +157,7 @@ img {
     filter: drop-shadow($shadow-runner);
     opacity: $opacity-main;
 
-    width: 25%;
-
+    // hover spotLine 效果
     &:hover+.sunSpotLine {
       opacity: 0.9;
     }
@@ -174,6 +180,10 @@ img {
       font-weight: bold;
       text-align: center;
       position: relative;
+      opacity: 0;
+
+      animation: titleIn 2s 1.55s;
+      animation-fill-mode: forwards;
     }
 
     .fa-chevron-down {
@@ -182,15 +192,22 @@ img {
       position: absolute;
       top: 50%;
       transform: translate(16px, -50%);
-      color: $fontColor-main;
+
+      animation: titleIn 2s 1.55s, titleDown 1s infinite alternate 1.55s;
+      animation-fill-mode: forwards;
     }
 
     .words {
       font-size: $fs-normal;
       font-weight: 500;
+      opacity: 0;
+      animation: wordsTop 0.9s;
+      animation-fill-mode: forwards;
 
       &:nth-child(3) {
         text-align: right;
+        animation: wordsDown 0.9s 0.65s;
+        animation-fill-mode: forwards;
       }
     }
   }
@@ -555,14 +572,65 @@ img {
   bottom: 0;
 }
 
+// @keyframes spotLineIn {
+//   0% {
+//     opacity: 0;
+//   }
 
-@keyframes fadeIn {
+//   100% {
+//     opacity: 0.9;
+//   }
+// }
+
+@keyframes wordsTop {
   0% {
+    transform: translateY(50%);
     opacity: 0;
   }
 
   100% {
+    transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes wordsDown {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes titleIn {
+  0% {
+    background-image: $bg-index;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 1;
+  }
+
+  100% {
+    background-image: none;
+    background-clip: unset;
+    -webkit-background-clip: unset;
+    color: $fontColor-main;
+    opacity: 1;
+  }
+}
+
+@keyframes titleDown {
+  0% {
+    transform: translate(16px, -60%);
+  }
+
+  100% {
+    transform: translate(16px, -40%);
   }
 }
 
