@@ -42,6 +42,10 @@ img {
   display: none;
 }
 
+.show9 {
+  opacity: 0.9 !important;
+}
+
 .wrapper {
   width: 100%;
   max-width: 1920px;
@@ -106,6 +110,14 @@ img {
   background: linear-gradient(-125deg, #FFE267 1.12%, #F3B895 45%, #AAB5C6 65%, #A4B0B4 85%, #3D7190 100%);
 }
 
+#index ::-moz-selection {
+  color: #383838;
+}
+
+#index ::selection {
+  color: #383838;
+}
+
 #index .sun {
   position: absolute;
   right: -350px;
@@ -131,6 +143,21 @@ img {
   opacity: 0.55;
 }
 
+#index .runnerFrame {
+  width: 25%;
+  position: absolute;
+  left: 0;
+  bottom: 1%;
+  z-index: 15;
+  -webkit-filter: drop-shadow(-8px 8px 8px rgba(51, 51, 51, 0.55));
+          filter: drop-shadow(-8px 8px 8px rgba(51, 51, 51, 0.55));
+  opacity: 0.88;
+}
+
+#index .runner {
+  width: 100%;
+}
+
 #index .sunSpotLine {
   position: absolute;
   left: 0;
@@ -147,21 +174,6 @@ img {
   #index .sunSpotLine {
     width: auto;
   }
-}
-
-#index .runner {
-  width: 25%;
-  position: absolute;
-  left: 0;
-  bottom: 1%;
-  z-index: 15;
-  -webkit-filter: drop-shadow(-8px 8px 8px rgba(51, 51, 51, 0.55));
-          filter: drop-shadow(-8px 8px 8px rgba(51, 51, 51, 0.55));
-  opacity: 0.88;
-}
-
-#index .runner:hover + .sunSpotLine {
-  opacity: 0.9;
 }
 
 #index .text {
@@ -625,6 +637,24 @@ img {
   position: absolute;
   left: 0;
   bottom: 0;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes wordsTop {

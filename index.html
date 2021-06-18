@@ -27,12 +27,17 @@
       <div class="wrapper">
         <!-- sun -->
         <div class="sun">
-          <div class="sunRed">
+          <div class="sunRed" data-depth="0.3">
             <div class="sunRed-line"></div>
           </div>
         </div>
+
         <!-- run -->
-        <img class="runner" src="./img/runner_rotate.svg">
+        <div class="runnerFrame" data-pointer-events="true" data-invert-x="false" data-invert-y="false">
+          <img class="runner" data-depth="0.3" src="./img/runner_rotate.svg">
+        </div>
+
+        <!-- sunSpotLine -->
         <img class="sunSpotLine" src="./img/spotline.svg">
 
         <!-- text -->
@@ -458,8 +463,8 @@
       <div class="wrapper">
         <!-- sun -->
         <div class="sun">
-          <div class="sunYellow">
-            <div class="sunYellow-line"></div>
+          <div class="sunYellow" data-depth="0.2">
+            <div class="sunYellow-line" data-depth="0.2"></div>
           </div>
         </div>
       </div>
@@ -530,6 +535,8 @@
   <!-- line 分享 -->
   <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async"
     defer="defer"></script>
+  <!-- parallax -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   <script src="js/index.js"></script>
 </body>
 
