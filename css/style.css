@@ -27,6 +27,14 @@ body::-webkit-scrollbar-thumb {
   background: #CF131B;
 }
 
+::-moz-selection {
+  color: #F7B200;
+}
+
+::selection {
+  color: #F7B200;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -464,6 +472,14 @@ img {
   background: linear-gradient(50deg, #FFF0BD 0%, #ACCDED 85%);
   overflow: hidden;
   position: relative;
+}
+
+#result ::-moz-selection {
+  color: #383838;
+}
+
+#result ::selection {
+  color: #383838;
 }
 
 #result .sun {

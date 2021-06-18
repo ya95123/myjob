@@ -33,6 +33,10 @@ body {
   }
 }
 
+::selection {
+  color: $fontColor-selectDark;
+}
+
 a {
   text-decoration: none;
   color: $fontColor-main;
@@ -111,7 +115,7 @@ img {
   background: $bg-index;
 
   ::selection {
-    color: #383838;
+    color: $fontColor-selectLight;
   }
 
   .sun {
@@ -423,6 +427,10 @@ img {
   background: $bg-result;
   overflow: hidden;
   position: relative;
+
+  ::selection {
+    color: $fontColor-selectLight;
+  }
 
   .sun {
     position: absolute;
