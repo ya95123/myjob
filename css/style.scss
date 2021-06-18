@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
   box-sizing: border-box;
   font-family: 黑體-繁, Apple LiGothic Medium, PingFang, 微軟正黑體, Microsoft JhengHei, WenQuanYi Zen Hei, helvetica, Arial, sans-serif;
 }
@@ -107,6 +108,31 @@ img {
       opacity: 1;
     }
   }
+}
+
+#menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 98;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  ::selection {
+    color: $fontColor-selectLight;
+  }
+
+  .item {
+    font-size: $fs-normal;
+    font-weight: bold;
+    line-height: 2.5;
+    margin: 0 24px 0 0;
+  }
+
 }
 
 #index {

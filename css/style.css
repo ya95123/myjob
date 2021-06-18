@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 黑體-繁, Apple LiGothic Medium, PingFang, 微軟正黑體, Microsoft JhengHei, WenQuanYi Zen Hei, helvetica, Arial, sans-serif;
@@ -112,6 +113,42 @@ img {
   opacity: 1;
 }
 
+#menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 98;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#menu ::-moz-selection {
+  color: #1A1E32;
+}
+
+#menu ::selection {
+  color: #1A1E32;
+}
+
+#menu .item {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 2.5;
+  margin: 0 24px 0 0;
+}
+
 #index {
   width: 100%;
   height: 100vh;
@@ -119,11 +156,11 @@ img {
 }
 
 #index ::-moz-selection {
-  color: #383838;
+  color: #1A1E32;
 }
 
 #index ::selection {
-  color: #383838;
+  color: #1A1E32;
 }
 
 #index .sun {
@@ -475,11 +512,11 @@ img {
 }
 
 #result ::-moz-selection {
-  color: #383838;
+  color: #1A1E32;
 }
 
 #result ::selection {
-  color: #383838;
+  color: #1A1E32;
 }
 
 #result .sun {
