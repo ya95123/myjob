@@ -108,7 +108,6 @@ img {
   opacity: 0.88;
   cursor: pointer;
   pointer-events: all;
-  z-index: 99;
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
@@ -136,6 +135,7 @@ img {
   right: 0;
   top: 0;
   height: 100vh;
+  padding: 0 0 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -836,5 +836,60 @@ img {
   100% {
     -webkit-transform: translate(16px, -40%);
             transform: translate(16px, -40%);
+  }
+}
+
+@media (max-width: 1300px) {
+  .container {
+    max-width: 1000px;
+  }
+  #index .sun {
+    right: -380px;
+    top: -390px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #index .runnerFrame {
+    width: 28%;
+    left: -1%;
+    bottom: 2%;
+  }
+  #index .text {
+    width: 60%;
+    height: 55%;
+  }
+  #index .text .title {
+    font-size: 110px;
+  }
+  #index .text .fa-chevron-down {
+    margin-left: 10px;
+    font-size: 58px;
+  }
+}
+
+@media (max-width: 768px) {
+  #navbar {
+    padding: 16px 24px;
+  }
+  #index .sun {
+    right: -395px;
+    top: -405px;
+  }
+  #index .runnerFrame {
+    width: 30%;
+  }
+  #index .text {
+    width: 68%;
+  }
+  #index .text .title {
+    font-size: 96px;
+  }
+  #index .text .fa-chevron-down {
+    margin-left: 4px;
+    font-size: 52px;
+  }
+  #index .text .words {
+    font-size: 18px;
   }
 }

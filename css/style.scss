@@ -105,7 +105,6 @@ img {
     opacity: $opacity-main;
     cursor: pointer;
     pointer-events: all;
-    z-index: 99;
     transition: $trans-text;
 
     &:hover {
@@ -129,6 +128,7 @@ img {
     top: 0;
 
     height: 100vh;
+    padding: 0 0 5%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -694,8 +694,79 @@ img {
 }
 
 // 跟 container 和文字大小、menu 有關
-@media (max-width:1300px) {}
+@media (max-width:1300px) {
+  .container {
+    max-width: 1000px;
+  }
 
-@media (max-width:1024px) {}
+  #index {
+    .sun {
+      right: -380px;
+      top: -390px;
+    }
+  }
+}
 
-@media (max-width:767px) {}
+@media (max-width:1024px) {
+  #index {
+    .runnerFrame {
+      width: 28%;
+      left: -1%;
+      bottom: 2%;
+    }
+
+    .text {
+      width: 60%;
+      height: 55%;
+
+      .title {
+        font-size: $fs-indexTitle-pad1024;
+      }
+
+      .fa-chevron-down {
+        margin-left: 10px;
+        font-size: 58px;
+      }
+    }
+  }
+}
+
+@media (max-width:768px) {
+  #navbar {
+    padding: 16px 24px;
+  }
+
+  #index {
+    .sun {
+      right: -395px;
+      top: -405px;
+    }
+
+    .runnerFrame {
+      width: 30%;
+    }
+
+    .text {
+      width: 68%;
+
+      .title {
+        font-size: $fs-indexTitle-pad768;
+      }
+
+      .fa-chevron-down {
+        margin-left: 4px;
+        font-size: 52px;
+      }
+
+      .words {
+        font-size: $fs-normal-pad768;
+      }
+    }
+  }
+}
+
+@media (max-width:600px) {
+  // TODO index
+}
+
+@media (max-width:320px) {}
