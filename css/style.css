@@ -113,7 +113,15 @@ img {
   opacity: 1;
 }
 
-#menu {
+#menu ::-moz-selection {
+  color: #1A1E32;
+}
+
+#menu ::selection {
+  color: #1A1E32;
+}
+
+#menu .menu-frame {
   position: absolute;
   right: 0;
   top: 0;
@@ -132,14 +140,6 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-#menu ::-moz-selection {
-  color: #1A1E32;
-}
-
-#menu ::selection {
-  color: #1A1E32;
 }
 
 #menu .item {
