@@ -87,7 +87,7 @@ img {
   display: flex;
   justify-content: space-between;
 
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 0;
   transform: translateX(-50%);
@@ -105,7 +105,7 @@ img {
     opacity: $opacity-main;
     cursor: pointer;
     pointer-events: all;
-
+    z-index: 99;
     transition: $trans-text;
 
     &:hover {
@@ -120,7 +120,7 @@ img {
   pointer-events: none;
 
   ::selection {
-    color: $fontColor-secondary;
+    color: $fontColor-main;
   }
 
   .menu-frame {
@@ -139,9 +139,16 @@ img {
     font-size: $fs-normal;
     font-weight: bold;
     line-height: 2.5;
+    margin: 0 -12px 0 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: $trans-menu;
+  }
+
+  .item-in {
+    opacity: 1;
     margin: 0 24px 0 0;
     pointer-events: all;
-    transition: $trans-text;
   }
 }
 
@@ -227,7 +234,8 @@ img {
       position: relative;
       opacity: 0;
 
-      animation: titleIn 2s 1.55s;
+      // animation: titleIn 2s 1.55s;
+      animation: titleIn 2.5s 0.35s;
       animation-fill-mode: forwards;
     }
 
@@ -238,7 +246,8 @@ img {
       top: 50%;
       transform: translate(16px, -50%);
 
-      animation: titleIn 2s 1.55s, titleDown 1s infinite alternate 1.55s;
+      // animation: titleIn 2s 1.55s, titleDown 1s infinite alternate 1.55s;
+      animation: titleIn 2.5s 0.35s, titleDown 1s infinite alternate 0.35s;
       animation-fill-mode: forwards;
     }
 
@@ -252,6 +261,7 @@ img {
       &:nth-child(3) {
         text-align: right;
         animation: wordsDown 0.9s 0.65s;
+        animation: wordsDown 0.9s;
         animation-fill-mode: forwards;
       }
     }

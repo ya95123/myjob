@@ -88,7 +88,7 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 0;
   -webkit-transform: translateX(-50%);
@@ -108,6 +108,7 @@ img {
   opacity: 0.88;
   cursor: pointer;
   pointer-events: all;
+  z-index: 99;
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
@@ -123,11 +124,11 @@ img {
 }
 
 #menu ::-moz-selection {
-  color: #F7B200;
+  color: #fff;
 }
 
 #menu ::selection {
-  color: #F7B200;
+  color: #fff;
 }
 
 #menu .menu-frame {
@@ -154,10 +155,17 @@ img {
   font-size: 20px;
   font-weight: bold;
   line-height: 2.5;
+  margin: 0 -12px 0 0;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#menu .item-in {
+  opacity: 1;
   margin: 0 24px 0 0;
   pointer-events: all;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
 }
 
 #index {
@@ -258,8 +266,8 @@ img {
   text-align: center;
   position: relative;
   opacity: 0;
-  -webkit-animation: titleIn 2s 1.55s;
-          animation: titleIn 2s 1.55s;
+  -webkit-animation: titleIn 2.5s 0.35s;
+          animation: titleIn 2.5s 0.35s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -271,8 +279,8 @@ img {
   top: 50%;
   -webkit-transform: translate(16px, -50%);
           transform: translate(16px, -50%);
-  -webkit-animation: titleIn 2s 1.55s, titleDown 1s infinite alternate 1.55s;
-          animation: titleIn 2s 1.55s, titleDown 1s infinite alternate 1.55s;
+  -webkit-animation: titleIn 2.5s 0.35s, titleDown 1s infinite alternate 0.35s;
+          animation: titleIn 2.5s 0.35s, titleDown 1s infinite alternate 0.35s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -291,6 +299,8 @@ img {
   text-align: right;
   -webkit-animation: wordsDown 0.9s 0.65s;
           animation: wordsDown 0.9s 0.65s;
+  -webkit-animation: wordsDown 0.9s;
+          animation: wordsDown 0.9s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
