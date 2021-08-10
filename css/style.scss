@@ -128,11 +128,15 @@ img {
     top: 0;
 
     height: 100vh;
-    padding: 0 0 5%;
+    padding: 0 0 5vmin;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+  }
+
+  .frame-phone {
+    display: none;
   }
 
   .item {
@@ -783,7 +787,47 @@ img {
     }
   }
 
-  // TODO index
+  #menu {
+
+    ::selection {
+      color: $fontColor-main;
+    }
+
+    .menu-frame {
+      position: absolute;
+    }
+
+    .frame-phone {
+      width: 280px;
+      height: 240px;
+      border-radius: 28px;
+      background: $bg-btn;
+
+      display: block;
+      opacity: 0;
+      position: absolute;
+      right: -280px;
+      z-index: -1;
+      transition: $trans-menu;
+    }
+
+    .frame-phone-in {
+      opacity: 1;
+      right: -160px;
+    }
+
+    .item {
+      margin: 0 -77px 0 0;
+      color: $bg-explore;
+      font-size: $fs-normal-pad768;
+      line-height: 2;
+    }
+
+    .item-in {
+      margin: 0 16px 0 0;
+    }
+  }
+
   #index {
     .sun {
       right: -175px;

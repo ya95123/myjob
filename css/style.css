@@ -135,7 +135,7 @@ img {
   right: 0;
   top: 0;
   height: 100vh;
-  padding: 0 0 5%;
+  padding: 0 0 5vmin;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -149,6 +149,10 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+#menu .frame-phone {
+  display: none;
 }
 
 #menu .item {
@@ -907,6 +911,41 @@ img {
   }
   #navbar .btn-menu {
     width: 30px;
+  }
+  #menu ::-moz-selection {
+    color: #fff;
+  }
+  #menu ::selection {
+    color: #fff;
+  }
+  #menu .menu-frame {
+    position: absolute;
+  }
+  #menu .frame-phone {
+    width: 280px;
+    height: 240px;
+    border-radius: 28px;
+    background: #fff;
+    display: block;
+    opacity: 0;
+    position: absolute;
+    right: -280px;
+    z-index: -1;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #menu .frame-phone-in {
+    opacity: 1;
+    right: -160px;
+  }
+  #menu .item {
+    margin: 0 -77px 0 0;
+    color: #1B1F33;
+    font-size: 18px;
+    line-height: 2;
+  }
+  #menu .item-in {
+    margin: 0 16px 0 0;
   }
   #index .sun {
     right: -175px;

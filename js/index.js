@@ -1,6 +1,7 @@
 const runnerFrame = document.querySelector(".runnerFrame")
 const sunSpotLine = document.querySelector(".sunSpotLine")
 const btnMenu = document.querySelector(".btn-menu")
+const framePhone = document.querySelector(".frame-phone")
 
 const suns = document.querySelectorAll(".sun")
 const items = document.querySelectorAll(".item")
@@ -15,6 +16,20 @@ const isSpotLine = () => {
 }
 
 const menuIn = () => {
+  // 手機版
+  if (window.innerWidth <= 600) {
+    // frame-phone
+    framePhone.classList.toggle("frame-phone-in")
+
+    // item
+    items.forEach(item => {
+      if (item.getAttribute("class").includes("none")) return
+      item.classList.toggle("item-in")
+    })
+    return
+  }
+
+  // pc、pad
   let second = 0
   items.forEach(item => {
     if (item.getAttribute("class").includes("none")) return
