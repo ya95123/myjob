@@ -17,10 +17,9 @@ const isSpotLine = () => {
 
 const menuIn = () => {
   // 手機版
+  // frame-phone
+  framePhone.classList.toggle("frame-phone-in")
   if (window.innerWidth <= 600) {
-    // frame-phone
-    framePhone.classList.toggle("frame-phone-in")
-
     // item
     items.forEach(item => {
       if (item.getAttribute("class").includes("none")) return
