@@ -231,6 +231,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: $trans-text;
 
     .title {
       font-size: $fs-indexTitle;
@@ -238,6 +239,7 @@ img {
       text-align: center;
       position: relative;
       opacity: 0;
+      transition: $trans-text;
 
       // animation: titleIn 2s 1.55s;
       animation: titleIn 2.5s 0.35s;
@@ -710,6 +712,23 @@ img {
       right: -380px;
       top: -390px;
     }
+
+    .text {
+      width: 64%;
+
+      .title {
+        font-size: $fs-indexTitle-pad1024;
+      }
+
+      .fa-chevron-down {
+        margin-left: 10px;
+        font-size: 58px;
+      }
+
+      .words {
+        font-size: $fs-normal-pad768;
+      }
+    }
   }
 
   #result {
@@ -731,15 +750,6 @@ img {
     .text {
       width: 60%;
       height: 55%;
-
-      .title {
-        font-size: $fs-indexTitle-pad1024;
-      }
-
-      .fa-chevron-down {
-        margin-left: 10px;
-        font-size: 58px;
-      }
     }
   }
 }
@@ -769,10 +779,6 @@ img {
       .fa-chevron-down {
         margin-left: 4px;
         font-size: 52px;
-      }
-
-      .words {
-        font-size: $fs-normal-pad768;
       }
     }
   }
