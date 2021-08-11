@@ -49,7 +49,7 @@ img {
 }
 
 .none {
-  display: none;
+  display: none !important;
 }
 
 .show9 {
@@ -314,7 +314,7 @@ img {
     font-size: $fs-explore;
     font-weight: bold;
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.6;
     transition: $trans-text;
   }
 
@@ -410,8 +410,8 @@ img {
   }
 
   .bar {
-    // 2% 為起始點，滿為 100%
-    width: 2%;
+    // 0% 為起始點，滿為 100%
+    width: 0%;
     height: 4px;
     display: inline-block;
     border-radius: 18px;
@@ -441,24 +441,39 @@ img {
 
   #submit {
     width: fit-content;
+    padding: 6px 16px;
     margin: 130px auto 200px;
     font-size: $fs-explore;
+    border: 2px solid transparent;
+    border-radius: 13px;
     cursor: pointer;
     position: relative;
-    transition: 0.1s;
+    transition: $trans-normal;
 
-    &:active {
-      color: $fontColor-secondary;
+    &:hover {
+      color: $bg-explore;
+      background: $bg-btn;
+      border: 2px solid $bg-btn;
+      font-weight: bold;
     }
+  }
+
+  .active {
+    color: $bg-explore;
+    background: $bg-btn;
+    border: 2px solid $bg-btn;
+    font-weight: bold;
   }
 
   .loading-bar {
     display: block;
-    width: 0;
+    // 0% - 100%
+    width: 100%;
     height: 2px;
     background: $fontColor-main;
     border-radius: 18px;
     transition: $trans-normal;
+    animation: 3s loadingBar;
 
     position: absolute;
     left: 0;
@@ -468,9 +483,11 @@ img {
   .loading-star {
     width: 90px;
     position: absolute;
-    left: 0;
-    top: calc(100% + 18px);
-    // TODO 動畫閃爍
+    left: 50%;
+    top: calc(100% + 24px);
+    transform: translateX(-50%);
+    // 動畫閃爍 轉 2 次，共三秒
+    animation: 1.5s loadingStar 2;
   }
 }
 
@@ -701,6 +718,26 @@ img {
   }
 }
 
+@keyframes loadingBar {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes loadingStar {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
 // 跟 container 和文字大小、menu 有關
 @media (max-width:1300px) {
   .container {
@@ -731,6 +768,39 @@ img {
     }
   }
 
+  #explore {
+    .description {
+      font-size: $fs-description - 4px;
+    }
+
+    .description-small {
+      font-size: $fs-explore - 2px;
+    }
+
+    .eg-number {
+      font-size: $fs-explore - 2px;
+    }
+
+    .btn-query {
+      padding: 10px;
+      font-size: $fs-explore - 2px;
+    }
+
+    .btn-icon {
+      width: 26px;
+    }
+
+    // main-topic
+    .topic {
+      font-size: $fs-explore - 2px;
+    }
+
+    .number {
+      font-size: $fs-explore - 2px;
+      top: -14px;
+    }
+  }
+
   #result {
     .sun {
       left: -380px;
@@ -750,6 +820,64 @@ img {
     .text {
       width: 60%;
       height: 55%;
+    }
+  }
+
+  #explore {
+    padding: 0 0 100px 0;
+
+    .description {
+      padding: 100px 32px;
+      font-size: $fs-description - 4px;
+    }
+
+    .description-small {
+      padding: 100px 32px 0;
+      font-size: $fs-explore - 4px;
+    }
+
+    .star {
+      width: 80px;
+    }
+
+    .eg-range {
+      width: 180px;
+      margin: 65px auto;
+    }
+
+    .eg-number {
+      font-size: $fs-explore - 4px;
+      top: -14px;
+    }
+
+    .btn-query {
+      padding: 8px 10px;
+      margin: 30px 8px 56px;
+      font-size: $fs-explore - 4px;
+    }
+
+    .btn-icon {
+      width: 24px;
+    }
+
+    // main-topic
+    .topic {
+      font-size: $fs-explore - 4px;
+    }
+
+    .number {
+      font-size: $fs-explore - 4px;
+      top: -14px;
+    }
+
+    #submit {
+      padding: 4px 14px;
+      margin: 110px auto 180px;
+      font-size: $fs-explore - 2px;
+    }
+
+    .loading-star {
+      width: 80px;
     }
   }
 }
@@ -783,6 +911,38 @@ img {
     }
   }
 
+  #menu {
+    .frame-phone {
+      width: 280px;
+      height: 240px;
+      border-radius: 28px;
+      background: $bg-btn;
+
+      display: block;
+      opacity: 0;
+      position: absolute;
+      right: -280px;
+      z-index: -1;
+      transition: $trans-menu;
+    }
+
+    .frame-phone-in {
+      opacity: 1;
+      right: -160px;
+    }
+
+    .item {
+      font-size: $fs-normal-pad768;
+      color: $bg-explore;
+      margin: 0 -77px 0 0;
+      line-height: 2;
+    }
+
+    .item-in {
+      margin: 0 16px 0 0;
+    }
+  }
+
   #result {
     .sun {
       left: -395px;
@@ -806,47 +966,6 @@ img {
 
     .btn-menu {
       width: 30px;
-    }
-  }
-
-  #menu {
-
-    ::selection {
-      color: $fontColor-main;
-    }
-
-    .menu-frame {
-      position: absolute;
-    }
-
-    .frame-phone {
-      width: 280px;
-      height: 240px;
-      border-radius: 28px;
-      background: $bg-btn;
-
-      display: block;
-      opacity: 0;
-      position: absolute;
-      right: -280px;
-      z-index: -1;
-      transition: $trans-menu;
-    }
-
-    .frame-phone-in {
-      opacity: 1;
-      right: -160px;
-    }
-
-    .item {
-      margin: 0 -77px 0 0;
-      color: $bg-explore;
-      font-size: $fs-normal-pad768;
-      line-height: 2;
-    }
-
-    .item-in {
-      margin: 0 16px 0 0;
     }
   }
 
